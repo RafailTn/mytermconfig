@@ -1,0 +1,302 @@
+command_timeout = 200
+format = """
+$os\
+$username\
+$directory\
+(\
+    $python\
+    $pixi\
+)\
+[](fg:fourth bg:fifth)\
+$docker_context\
+[](fg:fifth bg:sixth)\
+(\
+    $git_branch\
+	$git_status\
+)\
+[](fg:sixth bg:seventh)\
+$cmd_duration\
+$character\
+"""
+
+# Palettes:
+#   opal: sky blue.
+#   amethyst: purple.
+#   ruby: red.
+# To change the colors: change to the corresponding palette.
+
+palette = "emerald"
+
+# Disables the blank line at the start of the prompt
+add_newline = true
+
+
+[palettes.opal]
+first = "#38959E"
+second = "#37929D"
+third = "#358F9B"
+fourth = "#358CA0"
+fifth = "#3689A2"
+sixth = "#3785A4"
+seventh = "#3982A9"
+eighth = "#3A7EAE"
+error = "#C1121F"
+# Text color:
+black = "#272D37"
+white = "#CBF4F8"
+github = "#B02B10"
+
+[palettes.amethyst]
+first = "#6E43C4"
+second = "#6A3EC0"
+third = "#693CBC"
+fourth = "#663AB7"
+fifth = "#6238B1"
+sixth = "#6037AC"
+seventh = "#5D36A6"
+eighth = "#5A359E"
+error = "#C1121F"
+# Text color:
+black = "#272D37"
+white = "#F2EBFF"
+github = "#B02B10"
+
+[palettes.ruby]
+first = "#873739"
+second = "#8B383B"
+third = "#8D393C"
+fourth = "#8F393D"
+fifth = "#91393E"
+sixth = "#92393E"
+seventh = "#93393F"
+eighth = "#98393F"
+error = "#C1121F"
+# Text color:
+black = "#272D37"
+white = "#F2EBFF"
+github = "#450920"
+
+[palettes.matrix]
+first = "#00FF41"
+second = "#00F03C"
+third = "#00E838"
+fourth = "#00DD33"
+fifth = "#00D42E"
+sixth = "#00CC2A"
+seventh = "#00C325"
+eighth = "#00BA21"
+error = "#C1121F"
+# Text color:
+black = "#0D0208"
+white = "#E8FFE8"
+github = "#B02B10"
+
+[palettes.emerald]
+first = "#1B9E77"
+second = "#1A9873"
+third = "#19926F"
+fourth = "#188C6B"
+fifth = "#178667"
+sixth = "#178667"
+seventh = "#157A5F"
+eighth = "#14745B"
+error = "#C1121F"
+# Text color:
+black = "#272D37"
+white = "#E8FFF5"
+github = "#B02B10"
+
+[palettes.terminal]
+first = "#39D353"
+second = "#37CC50"
+third = "#35C54D"
+fourth = "#33BE4A"
+fifth = "#31B747"
+sixth = "#2FB044"
+seventh = "#2DA941"
+eighth = "#2BA23E"
+error = "#C1121F"
+# Text color:
+black = "#0A1F0A"
+white = "#E0FFE0"
+github = "#B02B10"
+
+[palettes.cyber]
+first = "#00D9A3"
+second = "#00D29E"
+third = "#00CB99"
+fourth = "#00C494"
+fifth = "#00BD8F"
+sixth = "#00B68A"
+seventh = "#00AF85"
+eighth = "#00A880"
+error = "#C1121F"
+# Text color:
+black = "#001A14"
+white = "#CCFFF0"
+github = "#B02B10"
+
+[palettes.mint]
+first = "#4ECDC4"
+second = "#4AC6BD"
+third = "#46BFB6"
+fourth = "#42B8AF"
+fifth = "#3EB1A8"
+sixth = "#3AAAA1"
+seventh = "#36A39A"
+eighth = "#329C93"
+error = "#C1121F"
+# Text color:
+black = "#272D37"
+white = "#E0FFF9"
+github = "#B02B10"
+
+[palettes.forest]
+first = "#2D6A4F"
+second = "#2B654B"
+third = "#296047"
+fourth = "#275B43"
+fifth = "#25563F"
+sixth = "#23513B"
+seventh = "#214C37"
+eighth = "#1F4733"
+error = "#C1121F"
+# Text color:
+black = "#081C15"
+white = "#D8F3DC"
+github = "#B02B10"
+
+[palettes.neon]
+first = "#39FF14"
+second = "#35F312"
+third = "#31E710"
+fourth = "#2DDB0E"
+fifth = "#29CF0C"
+sixth = "#25C30A"
+seventh = "#21B708"
+eighth = "#1DAB06"
+error = "#C1121F"
+# Text color:
+black = "#0F2808"
+white = "#F0FFE0"
+github = "#B02B10"
+
+[os]
+format = "[](first)[$symbol]($style)[](fg:first bg:second)"
+style = "bg:first fg:white"
+disabled = false
+
+[os.symbols]
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "﯑ "
+Gentoo = " "
+HardenedBSD = "ﲊ "
+Illumos = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = " "
+openSUSE = " "
+OracleLinux = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = " "
+Solus = "ﴱ "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
+
+[username]
+show_always = true
+style_user = "bg:second fg:white"
+style_root = "bg:second fg:white"
+format = '[$user]($style)[](fg:second bg:third)'
+
+[directory]
+style = "bg:third fg:white"
+format = "[   $path ]($style)($style)[$read_only]($read_only_style)[](fg:third bg:fourth)"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[directory.substitutions]
+"Documents" = "  "
+"Downloads" = "  "
+"Music" = "  "
+"Pictures" = "  "
+
+[python]
+symbol = " "
+version_format = "${raw}"
+style = "bg:fourth fg:white"
+python_binary = ["./venv/bin/python", "./env/Scripts/python", "python", "python3", "python2"]
+format = '[$symbol($version)]($style)[ (\($virtualenv\)) ](bg:fourth fg:white)'
+
+[pixi]
+symbol = " "
+style = "bg:fourth fg:white"
+format = '[$symbol ($environment) ]($style)'
+
+[docker_context]
+disabled = true
+symbol = " "
+style = "bg:fifth fg:white"
+format = '[$symbol $context ]($style)'
+
+[git_branch]
+format = "[$branch]($style)"
+style = "bg:sixth fg:white"
+
+[git_status]
+format     = '[$all_status]($style)'
+style      = "bg:sixth fg:white italic" 
+ahead      = "⇡${count} "
+diverged   = "⇕⇡${ahead_count}⇣${behind_count} "
+behind     = "⇣${count} "
+conflicted = " "
+up_to_date = " "
+untracked  = "? "
+modified   = " "
+stashed    = ""
+staged     = ""
+renamed    = ""
+deleted    = ""
+
+[memory_usage]
+disabled = true
+threshold = 0
+symbol = ""
+style = "bg:seventh fg:white"
+format = "[ $symbol $ram ]($style)"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:seventh fg:white"
+format = '[  $time]($style)[](fg:seventh bg:eighth)'
+
+[cmd_duration]
+style = "bg:eighth fg:white"
+format = '[  $duration ]($style)'
+
+[character]
+success_symbol = "[](fg:eighth bg:eighth)[](fg:eighth)"
+error_symbol = "[](fg:eighth bg:error)[](fg:error)"
